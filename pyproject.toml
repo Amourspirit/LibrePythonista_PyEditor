@@ -1,0 +1,12 @@
+[project]
+name = "PyEditor"
+version = "0.1.0"
+description = "Python Editor"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "flatpak-pip-generator>=24.0.0",
+]

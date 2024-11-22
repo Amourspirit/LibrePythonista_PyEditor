@@ -1,0 +1,1 @@
+librepythonista_python_editor==0.1.7
