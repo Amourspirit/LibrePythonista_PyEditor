@@ -3,8 +3,17 @@ name = "PyEditor"
 version = "0.1.0"
 description = "Python Editor"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.8"
+authors = [
+    {name = ":Barry-Thomas-Paul: Moss", email = "4193389+Amourspirit@users.noreply.github.com"}
+]
+license = {file = "LICENSE"}
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Amourspirit/com.github.amourspirit.librepythonista.PyEditor"
+Repository = "https://github.com/Amourspirit/com.github.amourspirit.librepythonista.PyEditor"
+Issues = "https://github.com/Amourspirit/com.github.amourspirit.librepythonista.PyEditor/issues"
 
 [dependency-groups]
 dev = [
