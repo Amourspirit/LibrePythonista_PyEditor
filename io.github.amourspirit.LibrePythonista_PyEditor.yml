@@ -2,7 +2,6 @@ app-id: io.github.amourspirit.LibrePythonista_PyEditor
 runtime: org.gnome.Platform
 runtime-version: '47'
 sdk: org.gnome.Sdk
-version: '0.1.0'  # Application version
 command: cell_edit
 finish-args:
   - --socket=wayland
@@ -11,7 +10,6 @@ finish-args:
   - --share=network
   - --filesystem=home
   - --filesystem=~/.var/app/org.libreoffice.LibreOffice:ro
-  - --env=FLATPAK_APP_VERSION=0.1.0  # Optional environment variable
 cleanup:
   - /include
   - /lib/pkgconfig
@@ -38,6 +36,9 @@ modules:
       # - SITE_PACKAGES_DIR="/app/lib/python${PYTHON_VERSION}/site-packages"
       # - install -Dm644 cell_edit_fp.py "${SITE_PACKAGES_DIR}/cell_edit_fp.py"
     sources:
+      # - type: git
+      #   url: https://github.com/Amourspirit/LibrePythonista_PyEditor
+      #   tag: v0.1
       - type: file
         path: cell_edit
       - type: file

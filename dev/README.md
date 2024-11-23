@@ -41,6 +41,28 @@ uv run flatpak_pip_generator --runtime='org.freedesktop.Sdk//24.08' --requiremen
 
 Make sure chmod +x `cell_edit` file.
 
+## Submission
+
+[Flathub submissing](https://docs.flathub.org/docs/for-app-authors/submission/)
+
+### Build
+
+```sh
+flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir io.github.amourspirit.LibrePythonista_PyEditor.yml
+```
+
+### Run and test
+
+```sh
+flatpak run io.github.amourspirit.LibrePythonista_PyEditor
+```
+
+### Linting
+
+```sh
+flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest io.github.amourspirit.LibrePythonista_PyEditor.yml
+```
+
 ## Other Resources
 
 Flatpak Documentation [Manifest](https://docs.flatpak.org/en/latest/manifests.html)
