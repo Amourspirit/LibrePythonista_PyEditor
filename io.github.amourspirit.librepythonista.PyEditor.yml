@@ -1,4 +1,4 @@
-app-id: com.github.amourspirit.librepythonista.PyEditor
+app-id: io.github.amourspirit.librepythonista.PyEditor
 runtime: org.gnome.Platform
 runtime-version: '47'
 sdk: org.gnome.Sdk

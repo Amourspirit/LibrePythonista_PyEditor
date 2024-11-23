@@ -11,9 +11,9 @@ license = {file = "LICENSE"}
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/Amourspirit/com.github.amourspirit.librepythonista.PyEditor"
-Repository = "https://github.com/Amourspirit/com.github.amourspirit.librepythonista.PyEditor"
-Issues = "https://github.com/Amourspirit/com.github.amourspirit.librepythonista.PyEditor/issues"
+Homepage = "https://github.com/Amourspirit/io.github.amourspirit.librepythonista.PyEditor"
+Repository = "https://github.com/Amourspirit/io.github.amourspirit.librepythonista.PyEditor"
+Issues = "https://github.com/Amourspirit/io.github.amourspirit.librepythonista.PyEditor/issues"
 
 [dependency-groups]
 dev = [

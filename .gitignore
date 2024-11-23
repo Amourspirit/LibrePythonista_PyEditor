@@ -14,6 +14,7 @@ wheels/
 .flatpak-builder
 build-dir
 build
+/repo
 
 # Flatpak Pip Generator
 python3-requirements.yaml
