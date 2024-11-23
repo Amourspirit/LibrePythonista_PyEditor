@@ -1,7 +1,7 @@
 [project]
-name = "PyEditor"
+name = "LibrePythonista_PyEditor"
 version = "0.1.0"
-description = "Python Editor"
+description = "LibrePythonista Python Editor"
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [

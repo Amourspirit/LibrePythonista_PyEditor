@@ -1,12 +1,12 @@
-app-id: io.github.amourspirit.librepythonista.PyEditor
+app-id: io.github.amourspirit.LibrePythonista_PyEditor
 runtime: org.gnome.Platform
 runtime-version: '47'
 sdk: org.gnome.Sdk
 version: '0.1.0'  # Application version
 command: cell_edit
 finish-args:
-  - --socket=x11
   - --socket=wayland
+  - --socket=fallback-x11
   - --share=ipc
   - --share=network
   - --filesystem=home
