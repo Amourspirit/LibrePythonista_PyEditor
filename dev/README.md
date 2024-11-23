@@ -3,19 +3,19 @@
 ## Building Flatpak
 
 ```sh
-flatpak-builder build --verbose --force-clean com.github.amourspirit.librepythonista.PyEditor.yml
+flatpak-builder build --verbose --force-clean io.github.amourspirit.librepythonista.PyEditor.yml
 ```
 
 ## Installing
 
 ```sh
-flatpak-builder --force-clean build-dir com.github.amourspirit.librepythonista.PyEditor.yml --install --user
+flatpak-builder --force-clean build-dir io.github.amourspirit.librepythonista.PyEditor.yml --install --user
 ```
 
 ## Uninstalling
 
 ```sh
-flatpak uninstall com.github.amourspirit.librepythonista.PyEditor
+flatpak uninstall io.github.amourspirit.librepythonista.PyEditor
 ```
 
 ## PIP
