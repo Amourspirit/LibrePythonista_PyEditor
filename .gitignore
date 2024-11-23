@@ -12,12 +12,13 @@ wheels/
 # Flatpak
 .flatpak
 .flatpak-builder
-build-dir
-build
-/repo
+build-dir/
+repo/
+_build/
+builddir/
 
 # Flatpak Pip Generator
 python3-requirements.yaml
 
 # General
-/tmp
+tmp/
