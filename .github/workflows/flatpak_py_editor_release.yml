@@ -29,14 +29,15 @@ jobs:
         path: .
     - name: Create Release
       id: create_release
-      uses: actions/create-release@v1
+      uses: softprops/action-gh-release@v2
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
         tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        name: Release ${{ github.ref }}
         draft: false
         prerelease: false
+    - name: Set Upload URL
       run: echo "upload_url=${{ steps.create_release.outputs.upload_url }}" >> $GITHUB_ENV
     - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
