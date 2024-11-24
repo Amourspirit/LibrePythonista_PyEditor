@@ -25,10 +25,10 @@ jobs:
     - name: Download Artifact
       uses: actions/download-artifact@v3
       with:
-        name: LibrePythonista_PyEditor.flatpak.zip
+        name: LibrePythonista_PyEditor.flatpak
         path: .
-    - name: Unzip Artifact
-      run: unzip LibrePythonista_PyEditor.flatpak.zip
+    # - name: Unzip Artifact
+    #   run: unzip LibrePythonista_PyEditor.flatpak.zip
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
