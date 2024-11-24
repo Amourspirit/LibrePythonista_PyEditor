@@ -2,7 +2,7 @@ on:
   push:
     tags:
       - 'release*'
-name: CI
+name: CI-Release
 jobs:
   flatpak:
     name: "Flatpak"
@@ -17,6 +17,11 @@ jobs:
         bundle: LibrePythonista_PyEditor.flatpak
         manifest-path: io.github.amourspirit.LibrePythonista_PyEditor.yml
         cache-key: flatpak-builder-${{ github.sha }}
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: LibrePythonista_PyEditor-x86_64.zip
+        path: LibrePythonista_PyEditor.flatpak
     - name: Download Artifact
       uses: actions/download-artifact@v3
       with:
