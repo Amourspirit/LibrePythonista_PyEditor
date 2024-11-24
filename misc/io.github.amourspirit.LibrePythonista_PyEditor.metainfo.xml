@@ -1,27 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="console-application">
-  <id>io.github.amourspirit.librepythonista_pyeditor</id>
-  
-  <name>LibrePythonista PyEditor</name>
-  <summary>LibrePythonista Python Editor</summary>
-  
+  <id>io.github.amourspirit.LibrePythonista_PyEditor</id>
+  <url type="homepage">https://github.com/Amourspirit/LibrePythonista_PyEditor</url>
+  <name>LibrePythonista Py</name>
+  <summary>LibrePythonista ext python editor</summary>
+  <branding>
+    <color type="primary" scheme_preference="light">#dbf8ff</color>
+    <color type="primary" scheme_preference="dark">#194894</color>
+  </branding>
   <metadata_license>MIT</metadata_license>
   <project_license>MIT</project_license>
   
   <description>
     <p>
-      LibrePythonista Python Editor for the LibreOffice LibrePythonista extension
+      This app is Python editor for LibreOffice using the LibrePythonista extension.
     </p>
   </description>
-  
-  <icon type="stock">librepythonistapyeditor</icon>
+  <!-- <icon type="stock">librepythonistapy</icon> -->
+  <icon type="stock">io.github.amourspirit.LibrePythonista_PyEditor</icon>
+  <!-- <icon type="default">LibrePythonista_PyEditor</icon> -->
   
   <categories>
-    <category>Network</category>
-    <category>WebDevelopment</category>
+    <category>Utility</category>
+    <category>TextTools</category>
   </categories>
   
   <provides>
-    <binary>io.github.amourspirit.LibrePythonista_PyEditor</binary>
+    <binary>cell_edit</binary>
   </provides>
+  <developer id="io.github.amourspirit">
+    <name>:Barry-Thomas-Paul: Moss</name>
+    <email>4193389+Amourspirit@users.noreply.github.com</email>
+  </developer>
+  <releases>
+    <release date="2024-11-23" version="v0.1.0">
+      <description>
+        <p>
+          Release 0.1.0: Initial Release
+        </p>
+      </description>
+    </release>
+  </releases>
 </component>

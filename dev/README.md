@@ -45,6 +45,14 @@ Make sure chmod +x `cell_edit` file.
 
 [Flathub submissing](https://docs.flathub.org/docs/for-app-authors/submission/)
 
+## appstreamcli
+
+Validate `.metainfo.xml`.
+
+```sh
+appstreamcli validate ./misc/io.github.amourspirit.LibrePythonista_PyEditor.metainfo.xml
+```
+
 ### Build
 
 ```sh
@@ -59,10 +67,20 @@ flatpak run io.github.amourspirit.LibrePythonista_PyEditor
 
 ### Linting
 
+#### Manifest
+
 ```sh
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest io.github.amourspirit.LibrePythonista_PyEditor.yml
 ```
 
+#### Repo
+
+```sh
+flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
+```
+
 ## Other Resources
 
-Flatpak Documentation [Manifest](https://docs.flatpak.org/en/latest/manifests.html)
+- Flatpak Documentation [Manifest](https://docs.flatpak.org/en/latest/manifests.html)
+- [AppStream MetaInfo Creator](https://www.freedesktop.org/software/appstream/metainfocreator/)
+- [flatpak-github-actions](https://github.com/flatpak/flatpak-github-actions/)
