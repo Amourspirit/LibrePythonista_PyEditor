@@ -3,6 +3,8 @@ on:
     tags:
       - 'release*'
 name: CI-Release
+permissions:
+  contents: write
 jobs:
   flatpak:
     name: "Flatpak"
@@ -20,15 +22,15 @@ jobs:
     - name: Upload Flatpak
       uses: actions/upload-artifact@v3
       with:
-        name: LibrePythonista_PyEditor.flatpak
+        name: LibrePythonista_PyEditor-x86_64.zip
         path: LibrePythonista_PyEditor.flatpak
     - name: Download Artifact
       uses: actions/download-artifact@v3
       with:
-        name: LibrePythonista_PyEditor.flatpak
+        name: LibrePythonista_PyEditor-x86_64.zip
         path: .
-    # - name: Unzip Artifact
-    #   run: unzip LibrePythonista_PyEditor.flatpak.zip
+    - name: Unzip Artifact
+      run: unzip LibrePythonista_PyEditor-x86_64.zip
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -39,12 +41,13 @@ jobs:
         release_name: Release ${{ github.ref }}
         draft: false
         prerelease: false
+      run: echo "upload_url=${{ steps.create_release.outputs.upload_url }}" >> $GITHUB_ENV
     - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        upload_url: ${{ env.upload_url }}
         asset_path: LibrePythonista_PyEditor.flatpak
         asset_name: LibrePythonista_PyEditor.flatpak
         asset_content_type: application/vnd.flatpak
