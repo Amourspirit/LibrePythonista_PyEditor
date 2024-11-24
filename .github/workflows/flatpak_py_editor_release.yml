@@ -1,0 +1,45 @@
+on:
+  push:
+    tags:
+      - 'release*'
+name: CI
+jobs:
+  flatpak:
+    name: "Flatpak"
+    runs-on: ubuntu-latest
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:gnome-47
+      options: --privileged
+    steps:
+    - uses: actions/checkout@v4
+    - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+      with:
+        bundle: LibrePythonista_PyEditor.flatpak
+        manifest-path: io.github.amourspirit.LibrePythonista_PyEditor.yml
+        cache-key: flatpak-builder-${{ github.sha }}
+    - name: Download Artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: LibrePythonista_PyEditor-x86_64.zip
+        path: .
+    - name: Unzip Artifact
+      run: unzip LibrePythonista_PyEditor-x86_64.zip
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+     - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: LibrePythonista_PyEditor.flatpak
+        asset_name: LibrePythonista_PyEditor.flatpak
+        asset_content_type: application/vnd.flatpak
