@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="console-application">
+  <id>io.github.amourspirit.librepythonista_pyeditor</id>
+  
+  <name>LibrePythonista PyEditor</name>
+  <summary>LibrePythonista Python Editor</summary>
+  
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  
+  <description>
+    <p>
+      LibrePythonista Python Editor for the LibreOffice LibrePythonista extension
+    </p>
+  </description>
+  
+  <icon type="stock">librepythonistapyeditor</icon>
+  
+  <categories>
+    <category>Network</category>
+    <category>WebDevelopment</category>
+  </categories>
+  
+  <provides>
+    <binary>io.github.amourspirit.LibrePythonista_PyEditor</binary>
+  </provides>
+</component>
