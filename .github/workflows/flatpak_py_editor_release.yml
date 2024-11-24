@@ -17,18 +17,18 @@ jobs:
         bundle: LibrePythonista_PyEditor.flatpak
         manifest-path: io.github.amourspirit.LibrePythonista_PyEditor.yml
         cache-key: flatpak-builder-${{ github.sha }}
-    - name: Upload Artifact
+    - name: Upload Flatpak
       uses: actions/upload-artifact@v3
       with:
-        name: LibrePythonista_PyEditor-x86_64.zip
+        name: LibrePythonista_PyEditor.flatpak
         path: LibrePythonista_PyEditor.flatpak
     - name: Download Artifact
       uses: actions/download-artifact@v3
       with:
-        name: LibrePythonista_PyEditor-x86_64.zip
+        name: LibrePythonista_PyEditor.flatpak.zip
         path: .
     - name: Unzip Artifact
-      run: unzip LibrePythonista_PyEditor-x86_64.zip
+      run: unzip LibrePythonista_PyEditor.flatpak.zip
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
