@@ -30,8 +30,9 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "librepythonista_python_editor==0.1.7" --no-build-isolation
       - install -Dm755 cell_edit /app/bin/cell_edit
-      # - install -Dm644 internal/ui/res/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/librepythonistapy.svg
-      - install -Dm644 internal/ui/res/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
+      - install -Dm644 internal/ui/res/icon.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
+      # - install -Dm644 internal/ui/res/icon.svg /app/share/icons/hicolor/128x128/apps/$FLATPAK_ID.svg
+      # - install -Dm644 internal/ui/res/icon.svg /var/cache/swcatalog/icons/$FLATPAK_ID/128x128/icon.svg
       - install -Dm644 misc/$FLATPAK_ID.metainfo.xml $FLATPAK_DEST/share/metainfo/$FLATPAK_ID.metainfo.xml
       # - pwd
       # - ls -la
