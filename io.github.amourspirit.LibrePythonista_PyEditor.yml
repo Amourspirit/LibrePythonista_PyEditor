@@ -44,7 +44,7 @@ modules:
         path: .
       # - type: git
       #   url: https://github.com/Amourspirit/LibrePythonista_PyEditor
-      #   tag: v0.1
+      #   tag: release-v0.1.0
       - type: file
         path: cell_edit
       - type: file
