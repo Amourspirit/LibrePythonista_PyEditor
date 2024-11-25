@@ -39,14 +39,12 @@ jobs:
         name: Release ${{ github.ref }}
         draft: false
         prerelease: false
-    - name: Set Upload URL
-      run: echo "upload_url=${{ steps.create_release.outputs.upload_url }}" >> $GITHUB_ENV
     - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        upload_url: ${{ env.upload_url }}
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: LibrePythonista_PyEditor.flatpak
         asset_name: LibrePythonista_PyEditor.flatpak
         asset_content_type: application/vnd.flatpak
