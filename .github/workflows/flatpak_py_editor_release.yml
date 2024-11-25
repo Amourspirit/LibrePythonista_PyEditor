@@ -47,5 +47,6 @@ jobs:
         name: Release ${{ github.ref }}
         draft: false
         prerelease: false
+        overwrite: true
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
