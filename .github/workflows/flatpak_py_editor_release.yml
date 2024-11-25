@@ -20,12 +20,12 @@ jobs:
         manifest-path: io.github.amourspirit.LibrePythonista_PyEditor.yml
         cache-key: flatpak-builder-${{ github.sha }}
     - name: Upload Flatpak
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: LibrePythonista_PyEditor.flatpak
         path: LibrePythonista_PyEditor.flatpak
     - name: Download Artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: LibrePythonista_PyEditor.flatpak
         path: .
@@ -37,6 +37,5 @@ jobs:
         name: Release ${{ github.ref }}
         draft: false
         prerelease: false
-        overwrite: true
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
