@@ -29,16 +29,6 @@ jobs:
       with:
         name: LibrePythonista_PyEditor.flatpak
         path: .
-    - name: Create Release
-      id: create_release
-      uses: softprops/action-gh-release@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        name: Release ${{ github.ref }}
-        draft: false
-        prerelease: false
     - name: Create Release and Upload Asset
       uses: softprops/action-gh-release@v2
       with:
