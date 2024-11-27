@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="console-application">
+<component>
   <id>io.github.amourspirit.LibrePythonista_PyEditor</id>
   <url type="homepage">https://github.com/Amourspirit/LibrePythonista_PyEditor</url>
   <url type="bugtracker">https://github.com/Amourspirit/LibrePythonista_PyEditor/issues</url>
@@ -15,7 +15,11 @@
   
   <description>
     <p>
-      This app is Python editor for LibreOffice using the LibrePythonista extension.
+      This is not a stand alone app. This app is a Python editor for <em>LibreOffice</em> using the <em>LibrePythonista extension</em>.
+    </p>
+    <p>
+      This app add the necessary files and configuration to allow the <em>LibrePythonista extension</em>
+      to take advantage of the <em>LibrePythonista python editor</em> in <em>LibreOffice</em> running as a Flatpak.
     </p>
   </description>
   <icon type="stock">io.github.amourspirit.LibrePythonista_PyEditor</icon>
@@ -30,10 +34,17 @@
   </provides>
   <developer id="io.github.amourspirit">
     <name>:Barry-Thomas-Paul: Moss</name>
-    <email>4193389+Amourspirit@users.noreply.github.com</email>
+    <email>bigbytetech@gmail.com</email>
   </developer>
   <releases>
-    <release date="2024-11-24" version="v0.1.0">
+    <release date="2024-11-27" version="0.1.1">
+      <description>
+        <p>
+          Release 0.1.1: Configuration Updates. Update to librepythonista_python_editor version 0.1.8
+        </p>
+      </description>
+    </release>
+    <release date="2024-11-24" version="0.1.0">
       <description>
         <p>
           Release 0.1.0: Initial Release

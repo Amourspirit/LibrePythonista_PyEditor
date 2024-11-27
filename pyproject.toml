@@ -1,11 +1,11 @@
 [project]
 name = "LibrePythonista_PyEditor"
-version = "0.1.0"
+version = "0.1.1"
 description = "LibrePythonista Python Editor"
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [
-    {name = ":Barry-Thomas-Paul: Moss", email = "4193389+Amourspirit@users.noreply.github.com"}
+    {name = ":Barry-Thomas-Paul: Moss", email = "bigbytetech@gmail.com"}
 ]
 license = {file = "LICENSE"}
 dependencies = []
