@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="console-application">
+<component>
   <id>io.github.amourspirit.LibrePythonista_PyEditor</id>
   <url type="homepage">https://github.com/Amourspirit/LibrePythonista_PyEditor</url>
   <url type="bugtracker">https://github.com/Amourspirit/LibrePythonista_PyEditor/issues</url>
