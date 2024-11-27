@@ -7,7 +7,6 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --share=ipc
-  - --share=network
   - --filesystem=home
   - --filesystem=~/.var/app/org.libreoffice.LibreOffice:ro
 cleanup:
@@ -40,7 +39,7 @@ modules:
     sources:
       # - type: git
       #   url: https://github.com/Amourspirit/LibrePythonista_PyEditor
-      #   tag: release-v0.1.0
+      #   tag: release-v0.1.1
       - type: file
         path: cell_edit
       - type: file
