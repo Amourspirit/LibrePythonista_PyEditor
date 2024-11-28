@@ -54,12 +54,12 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://github.com/user-attachments/assets/bfe54760-84ee-48c7-b07a-b18431f81cdd</image>
+      <image>https://i.postimg.cc/6pm2tFz0/editor-001.png</image>
       <caption>Code Editor Window</caption>
       <caption xml:lang="en-GB">Code Editor Window</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/user-attachments/assets/878c8c52-34f4-47cd-b2c8-bfc869b750bc</image>
+      <image>https://i.postimg.cc/8z95qMPX/editor-002.png</image>
       <caption>Code Editor Window showing autocomplete</caption>
       <caption xml:lang="en-GB">Code Editor Window showing autocomplete</caption>
     </screenshot>
